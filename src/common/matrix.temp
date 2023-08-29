@@ -1,0 +1,44 @@
+#include <vector>
+#include <stdint>
+
+using namespace std;
+
+template<class T>
+app::Matrix::Matrix<T>(size_t rows, size_t cols): rows(rows), cols(cols) {
+	data.resize(rows * cols);
+};
+
+template<class T>
+T Matrix::get(size_t i, size_t j){
+	if (i >= rows || j >= cols){
+		throw std::invalid_argument("index out of range!");
+	}
+	return data[i*cols + j];
+}
+
+
+template<class T>
+void Matrix::set(size_t i, size_t j, T value){
+	if (i >= rows || j >= cols){
+		throw std::invalid_argument("index out of range!");
+	}
+	data[i*cols + j] = value;
+}
+
+template <class T>
+constexpr T& operator[](size_t i, size_t j){
+	return get(i,j);
+}
+
+template<class T>
+class row_iterator{
+	Matrix<T>* matrix;
+	int rownum;
+
+	public: 
+	row_iterator(Matrix<T>* matrix, int rownum): matrix(matrix), rownum(rownum) {};
+
+	T operator[](int index){
+
+	}
+}

@@ -1,4 +1,5 @@
-#pragma pack(push, 1)
+#ifndef BMP_H
+#define BMP_H
 
 #ifndef VECTOR_H
 #include <vector>
@@ -251,4 +252,4 @@ private:
      }
 };
 
-#pragma pack(pop)
+#endif
