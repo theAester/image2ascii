@@ -1,0 +1,17 @@
+image2ascii <source-file> 
+		-t/--type=TYPE								X
+		-f/--fmt/--format=FORMATSTR					X
+		-F/--fmtln/--format-lines=LINEFORMATSTR		X
+		-c/--contrast=FLOAT		X
+		-W/--width=INTEGER
+		-H/--height=INTEGER
+		-o/--output=FILENAME
+		--curve=FILENAME		X
+		--chars=FILENAME		Y
+
+TYPE := TXT|HTML
+FORMATSTR := <not implemented>
+LINEFORMATSTR := <not implemented>
+
+NOTES:
+	chars file must only include ascii characters (for now)
